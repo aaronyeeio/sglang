@@ -228,7 +228,6 @@ def run_one_case(
             # input_ids += tokenizer。。。。.encode(input_req.prompt)
             input_ids += [tokenizer.encode(input_req.prompt)]
         payload["image_data"] = [req.image_data for req in input_requests]
-        print(f"{input_ids=}")
 
     else:
         input_ids = [req.prompt for req in input_requests]
